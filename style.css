@@ -1,0 +1,66 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;   
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
+    background: linear-gradient(to right, #C67ACE, #CE1F6A);
+}
+
+.calculator-grid{
+    display: grid;
+    justify-content: center; 
+    align-content: center;
+    min-height: 100hv; 
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)  repeat(5, 100px);
+}   
+
+/* justify-content, defines how browser distributes space between
+    and around content items while, align-content, control 
+    algnment of the content of the grid.
+    line 18: the calculator takes up 100% height of the view port
+    The minmax() CSS function defines a size range greater than or equal to min and less than or equal to max. 
+*/
+
+
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.calculator-grid > button:hover{
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1/-1; /*from the first to last column*/
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+/* line 54 and 55 ensures that words are wrapped properply on the screen and
+the screen can contain large string of numbers */
+
+.output > .previous-operand{
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+.output > .current-operand{
+    color: #fff;
+    font-size: 2.5rem;
+}
