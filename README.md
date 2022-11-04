@@ -1,7 +1,7 @@
 # on-screen-calculator
 This calculator performs basic arithmectic calculations.
 
-It s built using Html, CSS and JavaScript.
+It was built using Html, CSS and JavaScript.
 
 It implements the use of object oriented programming.
 
